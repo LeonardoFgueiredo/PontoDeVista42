@@ -1,0 +1,42 @@
+  .imageContainer{
+    cursor: pointer;
+  }
+  
+  
+  .image {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    cursor: zoom-in; 
+  }
+  
+
+  .blur {
+    filter: blur(10px); 
+    transition: filter 0.3s ease; 
+  }
+  
+  .myMasonryGrid {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .myMasonryGridColumn {
+    background-clip: padding-box;
+  
+    padding-left: 16px; 
+
+    &:first-child{
+      padding-left: 0px;
+    }
+  }
+  
+  .myMasonryGridColumn > div {
+    margin-bottom: 16px;
+  }
+  
+  .imageContainer {
+    position: relative;
+  }
+ 
