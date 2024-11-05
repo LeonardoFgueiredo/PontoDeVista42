@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <section className={styles.image}>
-        <img src="/public/assets/logo.png"></img>
+        <img src="/assets/logo.png"/>
       </section>
 
       <section className={styles.links}>
