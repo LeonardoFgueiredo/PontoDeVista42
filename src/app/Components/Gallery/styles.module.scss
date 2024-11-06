@@ -9,6 +9,13 @@
     object-fit: cover; 
     cursor: zoom-in; 
   }
+
+  .loaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
   
 
   .blur {
