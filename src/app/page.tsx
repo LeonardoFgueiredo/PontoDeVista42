@@ -13,29 +13,24 @@ type Image = {
 };
 
 export default async function Home() {
-  //variáveis de ambiente -> Supabase
+  //-> Supabase
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
 
-  //cliente Supabase
   const supabaseAdmin = createClient(supabaseUrl, supabaseKey);
 
-  //busca imagens
   const { data, error } = await supabaseAdmin
     .from("images")
     .select("*")
     .order("id");
 
-  //erro na busca
   if (error) {
     console.error("Error fetching images:", error);
     return { notFound: true };
   }
 
-  //formato esperado
   const images = data as unknown;
 
-  //dados recebidos
   if (
     !Array.isArray(images) ||
     !images.every(
