@@ -2,9 +2,9 @@ import Gallery from "./Components/Gallery";
 import { createClient } from "@supabase/supabase-js";
 import styles from "./styles.module.scss";
 import Header from "./Components/Header";
+import ButtonTop from "./Components/ButtonTop";
 
 
-//tipo de dados da imagem
 type Image = {
   id: number;
   href: string;
@@ -43,11 +43,11 @@ export default async function Home() {
 
   return (
     <main>
-      <Header/>
-    <div className={styles.grid}>
-      <Gallery images={images as Image[]} />
-    </div>
-
+      <Header />
+      <div className={styles.grid}>
+        <Gallery images={images as Image[]} />
+        <ButtonTop />
+      </div>
     </main>
   );
 }
