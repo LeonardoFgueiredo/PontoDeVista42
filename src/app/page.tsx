@@ -43,11 +43,12 @@ export default async function Home() {
 
   return (
     <main>
-      <Header />
-      <div className={styles.grid}>
-        <Gallery images={images as Image[]} />
-        <ButtonTop />
-      </div>
+      <Header/>
+    <div className={styles.grid}>
+      <Gallery images={images as Image[]} />
+      <ButtonTop />
+    </div>
+
     </main>
   );
 }

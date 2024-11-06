@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import Masonry from "react-masonry-css";
 import { GridLoader } from "react-spinners";
 
-type ImageProps = {
+export type ImageProps = {
   id: number;
   href: string;
   imageSrc: string;
